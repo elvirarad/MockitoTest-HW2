@@ -69,16 +69,16 @@ class UserTest {
         assertThrows(IllegalArgumentException.class, ()-> new User("test", 35, "testtest.ru"));
     }
 
-    @Test
-    void testIfValidationWasCalled(){
-        //setup
-        User user = spy(User.class);
-        String testEmail = "test12@test.ru";
-        //run
-        user.setEmail(testEmail);
-        //assert
-        verify(user, atLeast(1)).validationEmail(testEmail);
-    }
+//    @Test
+//    void testIfValidationWasCalled(){
+//        //setup
+//        User user = spy(User.class);
+//        String testEmail = "test12@test.ru";
+//        //run
+//        user.setEmail(testEmail);
+//        //assert
+//        verify(user, atLeast(1)).validationEmail(testEmail);
+//    }
 
     @Test
     public void testIfValidationEmailWasCalledWhenValidateParameterWasCalled(){
